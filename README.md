@@ -54,20 +54,6 @@ fetal-health-classification/
 - pip (Python package manager)
 - ~500 MB disk space
 
-### Step 1: Clone Repository from GitHub
-
-**Using HTTPS (Recommended for beginners):**
-```bash
-git clone https://github.com/yourusername/fetal-health-classification.git
-cd fetal-health-classification
-```
-
-**Using SSH (If you have SSH keys configured):**
-```bash
-git clone git@github.com:yourusername/fetal-health-classification.git
-cd fetal-health-classification
-```
-
 **Manual Download (Without Git):**
 1. Visit: https://github.com/yourusername/fetal-health-classification
 2. Click "Code" → "Download ZIP"
@@ -97,15 +83,6 @@ python -m venv venv
 venv\Scripts\activate.bat
 ```
 
-**On macOS/Linux:**
-```bash
-# Create virtual environment
-python3 -m venv venv
-
-# Activate virtual environment
-source venv/bin/activate
-```
-
 ### Step 3: Install Dependencies
 
 ```bash
@@ -128,11 +105,6 @@ Check if the trained model exists:
 **Windows:**
 ```powershell
 dir optimized_fetal_health_model.pkl
-```
-
-**macOS/Linux:**
-```bash
-ls -la optimized_fetal_health_model.pkl
 ```
 
 **If model doesn't exist, generate it:**
@@ -357,7 +329,6 @@ curl http://127.0.0.1:5000/health
 ```bash
 # Verify virtual environment is activated
 # Windows: Check for (.venv) prefix in prompt
-# macOS/Linux: Same
 
 # Reinstall all dependencies
 pip install -r requirements.txt
@@ -413,13 +384,6 @@ netstat -ano | findstr :5000
 
 # Kill the process (replace PID with actual number)
 taskkill /PID <PID> /F
-```
-
-macOS/Linux:
-```bash
-# Find and kill process
-lsof -i :5000
-kill -9 <PID>
 ```
 
 ### Issue 4: `PermissionError` on Windows PowerShell
@@ -488,18 +452,6 @@ pip install -r requirements.txt
 pip list
 ```
 
-## � Security & Disclaimer
-
-⚠️ **Important:**
-- This tool is for **educational and decision-support purposes only**
-- **Always consult qualified healthcare professionals** for medical decisions
-- Predictions should not replace clinical judgment
-- Do not rely solely on AI for critical medical decisions
-- Data privacy: No user data is stored or transmitted to external servers
-- Use only with proper medical oversight
-
----
-
 ## 📛 Running on Different Operating Systems
 
 ### All Platforms - Complete Setup
@@ -522,12 +474,6 @@ Windows (Command Prompt):
 ```cmd
 python -m venv venv
 venv\Scripts\activate.bat
-```
-
-macOS/Linux:
-```bash
-python3 -m venv venv
-source venv/bin/activate
 ```
 
 **3. Install Dependencies:**
@@ -755,28 +701,8 @@ python app.py
 # Stop
 # Ctrl + C
 
-# Clean up
-# deactivate
-```
 
----
 
-## 🎉 Final Notes
-
-Thank you for using **Fetal Health Classification Web Application**!
-
-If you found this project helpful:
-- ⭐ **Star** it on GitHub
-- 🍴 **Fork** it for contributions
-- 💬 **Share** with others
-- 📢 **Report** issues to improve it
-
-**Happy predicting! 🏥❤️**
-
----
-
-**Last Updated:** April 2024  
-**Version:** 1.0.0  
 **Status:** ✅ Active Development  
 **License:** MIT
 
